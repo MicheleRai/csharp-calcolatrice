@@ -144,6 +144,11 @@ public static class CalcoliHelper
         {
             return 1;
         }
+        else if ( num2 < 0)
+        {
+            num2 = -num2;
+            return 1 / (num1 * ElevazioneAPotenzaRecursiva(num1, --num2));
+        }
         else
         {
             return num1 * ElevazioneAPotenzaRecursiva(num1, --num2);
