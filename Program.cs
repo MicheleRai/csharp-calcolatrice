@@ -30,7 +30,7 @@ Console.WriteLine(CalcoliHelper.MinimoTra(3, 5));
 Console.WriteLine(CalcoliHelper.MinimoTra(3.5, 5.5));
 Console.WriteLine(CalcoliHelper.MassimoTra(3, 5));
 Console.WriteLine(CalcoliHelper.MassimoTra(3.5, 5.5));
-Console.WriteLine(CalcoliHelper.ElevazioneAPotenza(3, 2));
+Console.WriteLine(CalcoliHelper.ElevazioneAPotenza(2, -1));
 
 
 

@@ -98,7 +98,7 @@ public static class CalcoliHelper
             return num2;
         }
     }
-    public static int ElevazioneAPotenza(int num1, int num2)
+    public static double ElevazioneAPotenza(double num1, double num2)
     {
         if ((num1 == 0 && num2 == 0) || (num1 != 0 && num2 == 0))
         {
@@ -112,20 +112,30 @@ public static class CalcoliHelper
         {
             return num1;
         }
+        else if ( num2 < 0 )
+        {
+            double risultato = num1;
+            double temp;
+
+            for(int i = 1; i < (-num2); i++)
+            {
+                temp = risultato * num1;
+                risultato = temp;
+            }
+            return 1 / risultato;
+        }
         else
         {
-            int risultato = num1;
-            int temp;
+            double risultato = num1;
+            double temp;
 
-            for(int i = 0; i < num2 - 1; i++)
+            for (int i = 1; i < num2; i++)
             {
                 temp = risultato * num1;
                 risultato = temp;
             }
             return risultato;
         }
-
-
 
     }
 
