@@ -140,18 +140,18 @@ public static class CalcoliHelper
     }
     public static double ElevazioneAPotenzaRecursiva(double num1, double num2)
     {
+
         if (num2 == 0)
         {
             return 1;
         }
         else if ( num2 < 0)
         {
-            num2 = -num2;
-            return 1 / (num1 * ElevazioneAPotenzaRecursiva(num1, --num2));
+            return 1 / (num1 * ElevazioneAPotenzaRecursiva(num1, (1 - num2)));
         }
         else
         {
-            return num1 * ElevazioneAPotenzaRecursiva(num1, --num2);
+            return num1 * ElevazioneAPotenzaRecursiva(num1, (num2 - 1));
         }
 
     }
