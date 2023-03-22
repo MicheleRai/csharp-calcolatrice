@@ -138,7 +138,18 @@ public static class CalcoliHelper
         }
 
     }
+    public static double ElevazioneAPotenzaRecursiva(double num1, double num2)
+    {
+        if (num2 == 0)
+        {
+            return 1;
+        }
+        else
+        {
+            return num1 * ElevazioneAPotenzaRecursiva(num1, --num2);
+        }
 
+    }
 
 }
 
