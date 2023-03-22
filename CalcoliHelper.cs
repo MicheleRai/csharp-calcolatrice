@@ -100,7 +100,33 @@ public static class CalcoliHelper
     }
     public static int ElevazioneAPotenza(int num1, int num2)
     {
-        if
+        if ((num1 == 0 && num2 == 0) || (num1 != 0 && num2 == 0))
+        {
+            return 1;
+        }
+        else if (num1 == 0 && num2 != 0)
+        {
+            return 0;
+        }
+        else if (num2 == 1 )
+        {
+            return num1;
+        }
+        else
+        {
+            int risultato = num1;
+            int temp;
+
+            for(int i = 0; i < num2 - 1; i++)
+            {
+                temp = risultato * num1;
+                risultato = temp;
+            }
+            return risultato;
+        }
+
+
+
     }
 
 
